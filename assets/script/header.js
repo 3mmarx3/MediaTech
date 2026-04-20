@@ -109,7 +109,7 @@ headerContainer.innerHTML = `
   <nav id="navbar" class="navbar-custom">
     <div class="nav-container">
       
-      <a href="#" class="nav-logo">MediaTech <span>Ads</span></a>
+      <a href="https://3mmarx3.github.io/MediaTech/" class="nav-logo">MediaTech <span>Ads</span></a>
       
       <button class="mobile-toggle" id="menuToggle">
         <i class="fa-solid fa-bars"></i>
