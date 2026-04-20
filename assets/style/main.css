@@ -954,19 +954,6 @@ body {
   background: rgba(255, 255, 255, 0.12);
 }
 
-.stat-num {
-  font-size: 4.2rem;
-  font-weight: 900;
-  color: white;
-  line-height: 1;
-  margin-bottom: 14px;
-}
-
-.stat-label {
-  font-size: 18px;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.75);
-}
 
 .vm-card {
   background: var(--bg);
