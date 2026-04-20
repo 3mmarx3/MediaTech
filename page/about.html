@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عن الشركة — MediaTech Ads</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --surface2: #f1f5f9;
+  --text: #0f172a;
+  --text-light: #334155;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --dark-bg: #0f172a;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Cairo', sans-serif;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+.cursor {
+  width: 12px; height: 12px;
+  background: var(--text);
+  border-radius: 50%;
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 99999;
+  transition: transform 0.1s ease;
+}
+
+.cursor-follower {
+  width: 36px; height: 36px;
+  border: 1px solid var(--text);
+  border-radius: 50%;
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 99998;
+  transition: transform 0.25s ease, width 0.3s, height 0.3s;
+}
+
+.hero-section {
+  padding: 160px 0 120px;
+  background: linear-gradient(135deg, var(--surface) 0%, #ffffff 100%);
+  position: relative;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 6vw, 5.2rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: var(--text);
+  margin-bottom: 28px;
+}
+
+.hero-subtitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-light);
+  line-height: 1.8;
+  max-width: 820px;
+}
+
+.foundation-section {
+  padding: 120px 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.foundation-card {
+  background: var(--dark-bg);
+  color: white;
+  border-radius: 40px;
+  padding: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.foundation-card::after {
+  content: '\f135';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  left: -30px;
+  bottom: -50px;
+  font-size: 220px;
+  opacity: 0.06;
+  color: white;
+}
+
+.date-box {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 16px 34px;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 32px;
+}
+
+.services-section {
+  padding: 130px 0;
+  background: var(--surface);
+}
+
+.section-badge {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 12px 26px;
+  border-radius: 100px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.service-card-outline {
+  border: 2px solid var(--border);
+  border-radius: 32px;
+  padding: 48px 40px;
+  background: transparent;
+  height: 100%;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card-outline:hover {
+  border-color: var(--text);
+  background: white;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+}
+
+.service-card-solid {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 32px;
+  padding: 48px 40px;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card-solid:hover {
+  box-shadow: 0 25px 50px rgba(0,0,0,0.09);
+  transform: translateY(-8px);
+}
+
+.service-card-dark {
+  background: var(--text);
+  color: white;
+  border-radius: 32px;
+  padding: 48px 40px;
+  height: 100%;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card-dark:hover {
+  background: var(--accent);
+  transform: translateY(-8px);
+}
+
+.service-icon {
+  width: 68px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  font-size: 28px;
+  margin-bottom: 28px;
+}
+
+.outline-icon { background: var(--surface); color: var(--text); }
+.solid-icon { background: var(--surface2); color: var(--accent); }
+.dark-icon { background: rgba(255,255,255,0.12); color: white; }
+
+.guarantee-section {
+  padding: 110px 0;
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  color: white;
+  text-align: center;
+}
+
+.contact-section {
+  padding: 130px 0;
+  background: var(--bg);
+}
+
+.contact-box {
+  border: 1px solid var(--border);
+  border-radius: 32px;
+  padding: 60px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.contact-box:hover {
+  border-color: var(--text);
+  background: var(--surface);
+}
+
+.btn-primary-custom {
+  background: var(--text);
+  color: white;
+  border: none;
+  padding: 20px 52px;
+  border-radius: 100px;
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s;
+}
+
+.btn-primary-custom:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.35);
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: var(--text);
+  border: 2px solid var(--border);
+  padding: 18px 48px;
+  border-radius: 100px;
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s;
+}
+
+.btn-outline-custom:hover {
+  border-color: var(--text);
+  background: var(--surface);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.9s all cubic-bezier(0.16,1,0.3,1);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* تنظيم الألوان والستايل الإضافي */
+.stats-container {
+  background: var(--text);
+  border-radius: 40px;
+  padding: 70px 50px;
+  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.12);
+}
+
+.stat-item {
+  position: relative;
+}
+
+.stat-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12%;
+  height: 76%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.stat-num {
+  font-size: 4.2rem;
+  font-weight: 900;
+  color: white;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.stat-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.vm-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 32px;
+  padding: 55px 45px;
+  height: 100%;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vm-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--text);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+.vm-icon {
+  width: 85px;
+  height: 85px;
+  background: var(--text);
+  color: white;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  margin-bottom: 32px;
+}
+
+.vm-card.mission .vm-icon {
+  background: var(--surface2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.custom-accordion .accordion-item {
+  border: 1px solid var(--border);
+  border-radius: 24px !important;
+  margin-bottom: 18px;
+  overflow: hidden;
+  background: white;
+  transition: all 0.3s;
+}
+
+.custom-accordion .accordion-item:hover {
+  border-color: var(--text);
+}
+
+.custom-accordion .accordion-button {
+  padding: 26px 32px;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  background: white;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+  background: var(--surface);
+}
+
+.custom-accordion .accordion-body {
+  padding: 0 32px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+@media (max-width: 991px) {
+  .stat-item:not(:last-child)::after { display: none; }
+  .stat-item { margin-bottom: 35px; }
+  .stats-container { padding: 50px 25px; }
+  .foundation-card, .vm-card { padding: 50px 35px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container" style="max-width: 1400px;">
+    <div class="row fade-in">
+      <div class="col-lg-10">
+        <h1 class="hero-title">MediaTech Ads<br><span style="color: var(--muted);">القوة الرقمية والأمان المالي.</span></h1>
+        <p class="hero-subtitle mt-4">
+          وكالة إعلانية متكاملة تجمع بين الإبداع الفني والصرامة التقنية. نحن لا نكتفي بإنشاء الحملات التسويقية، بل نمتلك البنية التحتية لحماية عوائدك، حل أعقد المشاكل التقنية، وصناعة تواجد رقمي لا يمكن تجاهله.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Foundation Section -->
+<section class="foundation-section">
+  <div class="container" style="max-width: 1400px;">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 fade-in">
+        <h2 style="font-size: 3rem; font-weight: 900; color: var(--text); margin-bottom: 28px;">قصة التأسيس والانطلاق</h2>
+        <p style="font-size: 20px; color: var(--text-light); line-height: 1.9; font-weight: 600;">
+          جاءت انطلاقتنا كاستجابة حاسمة للتحديات التي تواجه صناع المحتوى والشركات في إدارة أصولهم الرقمية. أدركنا أن التسويق يفقد قيمته إذا لم تكن الحسابات محمية والعوائد مضمونة.
+        </p>
+        <p style="font-size: 20px; color: var(--text-light); line-height: 1.9; font-weight: 600;">
+          اليوم، نحن نقدم حزمة 360 درجة تشمل كل ما يخص الميديا والبرمجة وحل المشاكل المعقدة التي يعجز عنها الآخرون.
+        </p>
+      </div>
+      <div class="col-lg-6 fade-in">
+        <div class="foundation-card">
+          <div class="date-box">
+            <i class="fa-solid fa-calendar-check" style="color: #60a5fa;"></i>
+            <span style="direction: ltr;">13 / 4 / 2026</span>
+          </div>
+          <h3 style="font-size: 32px; font-weight: 900; margin-bottom: 24px;">تاريخ التأسيس الرسمي</h3>
+          <p style="font-size: 18px; color: rgba(255,255,255,0.85); line-height: 1.85; font-weight: 600;">
+            منذ هذا التاريخ، اتخذنا عهداً على أن نكون الدرع الحامي لاستثمارات عملائنا، والركيزة الأساسية لنمو مبيعاتهم وتأمين أرباحهم عبر كافة المنصات.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section">
+  <div class="container" style="max-width: 1400px;">
+    <div class="text-center mb-5 fade-in">
+      <div class="section-badge"><i class="fa-solid fa-layer-group"></i> التخصصات الشاملة</div>
+      <h2 style="font-size: 3.5rem; font-weight: 900; color: var(--text);">حلولنا للميديا والأعمال</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 fade-in">
+        <div class="service-card-solid">
+          <div class="service-icon solid-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3 style="font-size: 24px; font-weight: 900; margin-bottom: 18px;">حملات إعلانية قوية</h3>
+          <p style="color: var(--text-light); font-size: 16px; font-weight: 600; line-height: 1.85;">
+            إدارة ميزانيات الإعلانات بدقة متناهية واستهداف دقيق للجمهور لضمان تحقيق أعلى معدلات التحويل ومبيعات مستمرة.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 fade-in">
+        <div class="service-card-outline">
+          <div class="service-icon outline-icon"><i class="fa-solid fa-pen-nib"></i></div>
+          <h3 style="font-size: 24px; font-weight: 900; margin-bottom: 18px;">تصميم محتوى يجذب العملاء</h3>
+          <p style="color: var(--text-light); font-size: 16px; font-weight: 600; line-height: 1.85;">
+            كتابة نصوص إعلانية مبتكرة وتصميم هوية بصرية وموشن جرافيك مصمم خصيصاً للتأثير على المستهلك وزيادة التفاعل.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-12 fade-in">
+        <div class="service-card-dark">
+          <div class="service-icon dark-icon"><i class="fa-solid fa-money-bill-transfer"></i></div>
+          <h3 style="font-size: 24px; font-weight: 900; margin-bottom: 18px;">إصلاح العوائد واستعادة الربح</h3>
+          <p style="color: rgba(255,255,255,0.9); font-size: 16px; font-weight: 600; line-height: 1.85;">
+            نعالج أسباب إيقاف الأرباح بشكل جذري، ونقدم خدمة حصرية لنقل العوائد بجميع أنواعها بأمان تام للمحافظ البنكية.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 fade-in">
+        <div class="service-card-outline">
+          <div class="service-icon outline-icon"><i class="fa-brands fa-facebook"></i></div>
+          <h3 style="font-size: 24px; font-weight: 900; margin-bottom: 18px;">إدارة الصفحات وحل جميع المشاكل</h3>
+          <p style="color: var(--text-light); font-size: 16px; font-weight: 600; line-height: 1.85;">
+            تدخل تقني سريع لحل كافة مشاكل التقييدات، الحظر، وانخفاض الوصول. كما نوفر "متاح صفحات إعداد بيور 100%" بضمان كامل خالية من أي مخالفات.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 fade-in">
+        <div class="service-card-solid">
+          <div class="service-icon solid-icon"><i class="fa-solid fa-lock"></i></div>
+          <h3 style="font-size: 24px; font-weight: 900; margin-bottom: 18px;">الحماية واسترجاع الحسابات</h3>
+          <p style="color: var(--text-light); font-size: 16px; font-weight: 600; line-height: 1.85;">
+            قسم تقني مخصص لاسترجاع الحسابات، فك حظر مديري الأعمال، وتأمين الصفحات الإعلانية بأعلى بروتوكولات الأمان السيبراني.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Guarantee Section (تم تغيير اللون الأخضر إلى أزرق غامق أنيق) -->
+<section class="guarantee-section fade-in">
+  <div class="container" >
+    <i class="fa-solid fa-shield-check" style="font-size: 85px; margin-bottom: 32px; opacity: 0.95;"></i>
+    <h2 style="font-size: 4rem; font-weight: 900; margin-bottom: 28px;">الضمان المالي المطلق</h2>
+    <p style="font-size: 24px; font-weight: 700; line-height: 1.8; margin-bottom: 0; opacity: 0.92;">
+      نحن نقدم التزاماً صارماً لا يقبل المساومة: ضمان استلام أرباحك بأمان تام. ننهي مشاكل تعليق الدفعات ونؤمن انتقال عوائدك دون أي تأخير.
+    </p>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-5 fade-in">
+  <div class="container" style="max-width: 1400px;">
+    <div class="stats-container">
+      <div class="row text-center">
+        <div class="col-lg-3 col-md-6 stat-item">
+          <div class="stat-num" style="direction: ltr;">+500</div>
+          <div class="stat-label">صفحة تم إدارتها</div>
+        </div>
+        <div class="col-lg-3 col-md-6 stat-item">
+          <div class="stat-num" style="direction: ltr;">+10K</div>
+          <div class="stat-label">حملة إعلانية ناجحة</div>
+        </div>
+        <div class="col-lg-3 col-md-6 stat-item">
+          <div class="stat-num" style="direction: ltr;">100%</div>
+          <div class="stat-label">نسبة استرجاع العوائد</div>
+        </div>
+        <div class="col-lg-3 col-md-6 stat-item">
+          <div class="stat-num" style="direction: ltr;">+5</div>
+          <div class="stat-label">دول حول العالم</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vision & Mission Section -->
+<section class="py-5 fade-in">
+  <div class="container" style="max-width: 1400px;">
+    <div class="text-center mb-5">
+      <div class="section-badge justify-content-center"><i class="fa-solid fa-eye"></i> نظرتنا للمستقبل</div>
+      <h2 style="font-size: 3.5rem; font-weight: 900; color: var(--text);">الرؤية والرسالة</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 fade-in">
+        <div class="vm-card">
+          <div class="vm-icon"><i class="fa-solid fa-eye"></i></div>
+          <h3 style="font-size: 32px; font-weight: 900; margin-bottom: 22px;">رؤيتنا</h3>
+          <p style="font-size: 18px; color: var(--muted); line-height: 1.9; font-weight: 600;">
+            أن نصبح الوكالة الرقمية الأولى في الشرق الأوسط التي تقدم حلولاً تقنية وتسويقية متكاملة، ونكون المرجعية الأولى لحماية الأصول الرقمية وضمان تدفق الأرباح بأمان تام، معتمدين على أحدث التطورات التكنولوجية في عالم الميديا.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 fade-in">
+        <div class="vm-card mission">
+          <div class="vm-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3 style="font-size: 32px; font-weight: 900; margin-bottom: 22px;">رسالتنا</h3>
+          <p style="font-size: 18px; color: var(--muted); line-height: 1.9; font-weight: 600;">
+            تمكين أصحاب الأعمال وصناع المحتوى من التركيز على إبداعهم ونموهم من خلال توفير بيئة رقمية آمنة. نحن نعمل يومياً على حل أعقد المشاكل التقنية، واستعادة الحقوق الرقمية، وتصميم حملات إعلانية قوية تحقق انتشاراً واسعاً وعائداً مالياً حقيقياً.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5 mb-5 fade-in">
+  <div class="container" >
+    <div class="text-center mb-5">
+      <div class="section-badge justify-content-center"><i class="fa-solid fa-circle-question"></i> كل ما تود معرفته</div>
+      <h2 style="font-size: 3.5rem; font-weight: 900; color: var(--text);">الأسئلة الشائعة</h2>
+    </div>
+    
+    <div class="accordion custom-accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            كم يستغرق وقت استرجاع الأرباح وحل مشاكل العوائد؟
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            تختلف المدة الزمنية بناءً على نوع المشكلة وحالة الصفحة. في أغلب الحالات، يتم تشخيص المشكلة فوراً ونبدأ في الإجراءات التقنية التي قد تستغرق من 48 ساعة حتى بضعة أيام عمل للوصول إلى حل جذري واستعادة تحقيق الأرباح.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            هل صفحات الإعداد البيور مضمونة فعلاً وخالية من المشاكل؟
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            نعم، بكل تأكيد. نحن نوفر صفحات "بيور 100%" تم تجهيزها بعناية فائقة وتأمينها بالكامل. جميع الصفحات التي نسلمها تكون خالية من أي مخالفات أو تقييدات سابقة، وجاهزة فوراً لبدء العمل وتحقيق العوائد.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            كيف تضمنون أمان حساباتي البنكية عند نقل العوائد؟
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            الأمان هو أولويتنا القصوى. عملية نقل العوائد تتم عبر بروتوكولات آمنة وموثوقة، ولا نطلب أبداً أي بيانات سرية أو أرقام سرية (Passwords/OTP) لحساباتك البنكية. نحن نقوم بالربط التقني النظامي داخل منصات العمل لضمان وصول أموالك لمحفظتك بشكل مباشر وآمن.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+const cursor = document.getElementById('cursor');
+const follower = document.getElementById('cursorFollower');
+let mx = 0, my = 0, fx = 0, fy = 0;
+
+document.addEventListener('mousemove', e => {
+  mx = e.clientX; 
+  my = e.clientY;
+  cursor.style.transform = `translate(${mx-6}px, ${my-6}px)`;
+});
+
+function animFollower() {
+  fx += (mx - fx) * 0.12;
+  fy += (my - fy) * 0.12;
+  follower.style.transform = `translate(${fx-18}px, ${fy-18}px)`;
+  requestAnimationFrame(animFollower);
+}
+animFollower();
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
