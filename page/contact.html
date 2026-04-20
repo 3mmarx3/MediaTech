@@ -7,17 +7,29 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 <link rel="stylesheet" href="../assets/style/main.css">
-
+<style>
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+*, html, body {
+  cursor: auto !important;
+}
+a, a *, button, button *, .btn-cta, .cursor-hover {
+  cursor: pointer !important;
+}
+input, textarea {
+  cursor: text !important;
+}
+select {
+  cursor: pointer !important;
+}
+</style>
 </head>
 <body>
 
-      <div id="header"></div>
-
-
-<div class="cursor" id="cursor"></div>
-<div class="cursor-follower" id="cursorFollower"></div>
+<div id="header"></div>
 
 <header class="page-header">
   <div class="container fade-in">
@@ -118,36 +130,7 @@
 <div id="footer"></div>
 <script src="../assets/script/header.js"></script>
 <script src="../assets/script/footer.js"></script>
-
 <script>
-const cursor = document.getElementById('cursor');
-const follower = document.getElementById('cursorFollower');
-let mx = 0, my = 0, fx = 0, fy = 0;
-
-const isTouchDevice = (('ontouchstart' in window) || (navigator.maxTouchPoints > 0));
-
-if (!isTouchDevice) {
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; 
-    my = e.clientY;
-    cursor.style.transform = `translate(${mx-6}px, ${my-6}px)`;
-  });
-
-  function animFollower() {
-    fx += (mx - fx) * 0.12;
-    fy += (my - fy) * 0.12;
-    follower.style.transform = `translate(${fx-18}px, ${fy-18}px)`;
-    requestAnimationFrame(animFollower);
-  }
-  animFollower();
-
-  const interactiveElements = document.querySelectorAll('.cursor-hover, a, button, input, select, textarea');
-  interactiveElements.forEach(el => {
-    el.addEventListener('mouseenter', () => follower.classList.add('hover-effect'));
-    el.addEventListener('mouseleave', () => follower.classList.remove('hover-effect'));
-  });
-}
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -155,10 +138,8 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.1 });
-
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
