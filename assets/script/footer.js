@@ -6,7 +6,7 @@ footer.innerHTML = `<footer>
         <a href="#" class="footer-logo">MediaTech Ads</a>
         <p class="footer-desc">وكالة رائدة في إدارة صفحات فيسبوك، إطلاق الحملات الإعلانية القوية، وحل كافة مشاكل العوائد مع ضمان استلام أرباحك بأمان تام.</p>
         <div class="d-flex gap-3">
-          <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.facebook.com/abomarwan0/" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
           <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
           <a href="https://wa.me/201220202940" target="_blank" class="social-btn"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
@@ -22,11 +22,11 @@ footer.innerHTML = `<footer>
       <div class="col-lg-3 col-md-6">
         <h5 class="footer-col-title">خدماتنا الأساسية</h5>
         <ul class="footer-links">
-          <li><a href="#">حملات إعلانية قوية</a></li>
-          <li><a href="#">تصميم محتوى جذاب</a></li>
-          <li><a href="#">إدارة صفحات فيسبوك</a></li>
-          <li><a href="#">حل مشاكل العوائد</a></li>
-          <li><a href="#">صفحات إعداد بيور 100%</a></li>
+          <li><a href="https://3mmarx3.github.io/MediaTech/page/services.html">حملات إعلانية قوية</a></li>
+          <li><a href="https://3mmarx3.github.io/MediaTech/page/services.html">تصميم محتوى جذاب</a></li>
+          <li><a href="https://3mmarx3.github.io/MediaTech/page/services.html">إدارة صفحات فيسبوك</a></li>
+          <li><a href="https://3mmarx3.github.io/MediaTech/page/services.html">حل مشاكل العوائد</a></li>
+          <li><a href="https://3mmarx3.github.io/MediaTech/page/services.html">صفحات إعداد بيور 100%</a></li>
         </ul>
       </div>
       <div class="col-lg-3 col-md-6">
@@ -42,8 +42,8 @@ footer.innerHTML = `<footer>
     <div class="footer-bottom">
       <p class="footer-copy">&copy; 2026 MediaTech Ads. جميع الحقوق محفوظة.</p>
       <div class="d-flex gap-4">
-        <a href="#" style="color:var(--muted);text-decoration:none;font-size:15px;font-weight:700;">سياسة الخصوصية</a>
-        <a href="#" style="color:var(--muted);text-decoration:none;font-size:15px;font-weight:700;">شروط الخدمة</a>
+        <a href="https://3mmarx3.github.io/MediaTech/page/privacy.html" style="color:var(--muted);text-decoration:none;font-size:15px;font-weight:700;">سياسة الخصوصية</a>
+        <a href="https://3mmarx3.github.io/MediaTech/page/terms.html" style="color:var(--muted);text-decoration:none;font-size:15px;font-weight:700;">شروط الخدمة</a>
       </div>
     </div>
   </div>
