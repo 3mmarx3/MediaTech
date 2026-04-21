@@ -22,6 +22,32 @@ a, a *, button, button *, .btn-primary-glow, .btn-ghost, .chat-toggle, .whatsapp
 input[type="text"], .chat-input {
   cursor: text !important;
 }
+@media screen and (max-width: 992px) {
+  .hero-tag {
+    margin: 5vh 0;
+  }
+  .about-badge {
+    display: none;
+  }
+  .about-img-box {
+    min-height: auto;
+  }
+  .d-flex.justify-content-center.gap-3.flex-wrap a {
+    width: 100%;
+    direction: ltr;
+    text-align: center !important;
+    justify-content: center;
+  }
+  .svc-card.fade-in.visible {
+    padding: 20px;
+  }
+  h2.cta-title {
+    font-size: xx-large;
+  }
+  section.hero {
+    padding-bottom: 5vh;
+  }
+}
 </style>
 </head>
 <body>
@@ -94,9 +120,6 @@ input[type="text"], .chat-input {
   </div>
 </section>
 
-
-
-
 <div class="ticker-wrap">
   <div class="ticker">
     <div class="ticker-item"><i class="fa-solid fa-bolt"></i> حملات إعلانية قوية</div>
@@ -111,6 +134,199 @@ input[type="text"], .chat-input {
   </div>
 </div>
 
+
+<style>
+  .services-showcase {
+    padding: 100px 0;
+    background: var(--surface, #f8fafc); /* لون خلفية السطح الأساسي */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .showcase-header {
+    margin-bottom: 70px;
+
+  }
+
+  .showcase-title {
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 900;
+    color: var(--text, #0f172a);
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  .showcase-desc {
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--muted, #64748b);
+    line-height: 1.8;
+  }
+
+  /* تنسيق شبكة الصور المميز */
+  .svc-img-card {
+    position: relative;
+    border-radius: 28px;
+    overflow: hidden;
+    height: 380px; /* ارتفاع ثابت للبطاقات للحفاظ على التناسق */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    cursor: pointer !important;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--border, #e2e8f0);
+  }
+
+  /* تأثير التكبير عند تمرير الماوس */
+  .svc-img-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 25px 60px rgba(79, 70, 229, 0.12); /* توهج بلون الأكسنت */
+    border-color: var(--accent, #4f46e5);
+  }
+
+  .svc-img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* جعل الصورة تغطي المساحة بالكامل */
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .svc-img-card:hover img {
+    transform: scale(1.1); /* تكبير الصورة قليلاً */
+  }
+
+  /* تأثير التراكب (Overlay) النصي */
+  .svc-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px 30px;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.98) 0%, rgba(15, 23, 42, 0) 100%);
+    color: white;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  .svc-img-card:hover .svc-card-overlay {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .svc-card-icon {
+    font-size: 30px;
+    color: #ffffff; /* لون الأكسنت في التراكب */
+    margin-bottom: 15px;
+  }
+
+  .svc-card-title {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #ffffff;
+    line-height: 1.3;
+  }
+
+  .svc-card-desc {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+
+  /* تنسيق خاص للشاشات الصغيرة */
+  @media (max-width: 991px) {
+    .svc-img-card {
+      height: 320px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .svc-img-card {
+      height: 280px;
+    }
+    .svc-card-overlay {
+      padding: 30px 20px;
+    }
+    .svc-card-title {
+      font-size: 20px;
+    }
+  }
+</style>
+
+<section class="services-showcase fade-in" id="services">
+  <div class="container" style="max-width: 1400px;">
+    
+    <div class="showcase-header">
+      <div class="section-label" style="display: inline-block; padding: 8px 20px; background: rgba(79, 70, 229, 0.1); color: #4f46e5; border-radius: 50px; font-weight: 800; margin-bottom: 15px;">معرض خدماتنا المميزة</div>
+      <h2 class="showcase-title">حلول متكاملة<br><span class="muted">لنمو أعمالك الرقمية.</span></h2>
+      <p class="showcase-desc">نؤمن بأن النجاح الرقمي يتطلب توازناً بين الإبداع الفني والدقة التقنية. ألقِ نظرة على أبرز ما نقدمه لضمان انتشارك، مبيعاتك، وأمان عوائدك.</p>
+    </div>
+
+    <div class="row g-4 align-items-center">
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="svc-img-card">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop" alt="إدارة صفحات فيسبوك">
+          <div class="svc-card-overlay">
+            <i class="fa-brands fa-facebook svc-card-icon" style="color:#1877F2;"></i>
+            <h4 class="svc-card-title">إدارة صفحات فيسبوك وحل المشاكل</h4>
+            <p class="svc-card-desc">إدارة احترافية شاملة لصفحاتك، مع تدخل سريع لحل كافة المشاكل التقنية لضمان استمرارية العمل.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="svc-img-card">
+          <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800&auto=format&fit=crop" alt="تصميم محتوى إبداعي">
+          <div class="svc-card-overlay">
+            <i class="fa-solid fa-wand-magic-sparkles svc-card-icon" style="color:#60a5fa;"></i>
+            <h4 class="svc-card-title">تصميم محتوى يجذب العملاء</h4>
+            <p class="svc-card-desc">نبتكر محتوى إبداعي عالي الجودة يخطف انتباه جمهورك ويحولهم إلى عملاء دائمين.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="svc-img-card">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="حملات إعلانية ناجحة">
+          <div class="svc-card-overlay">
+            <i class="fa-solid fa-rocket svc-card-icon" style="color:#25d366;"></i>
+            <h4 class="svc-card-title">حملات إعلانية قوية</h4>
+            <p class="svc-card-desc">نطلق حملات مدروسة وموجهة بدقة لضمان تحقيق أعلى نسبة عائد على الاستثمار ومبيعات مستمرة.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6">
+        <div class="svc-img-card">
+          <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=1200&auto=format&fit=crop" alt="إصلاح عوائد فيسبوك">
+          <div class="svc-card-overlay">
+            <i class="fa-solid fa-money-check-dollar svc-card-icon" style="color:#f59e0b;"></i>
+            <h4 class="svc-card-title">إصلاح العوائد واستعادة الربح</h4>
+            <p class="svc-card-desc">متخصصون في حل مشاكل العوائد المعقدة واستعادة الربح مرة أخرى للصفحات المتضررة بكل أمان وفاعلية.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-12">
+        <div class="svc-img-card">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" alt="نقل عوائد بضمان">
+          <div class="svc-card-overlay">
+            <i class="fa-solid fa-file-invoice-dollar svc-card-icon" style="color:#ffffff;"></i>
+            <h4 class="svc-card-title">نقل العوائد وصفحات بيور</h4>
+            <p class="svc-card-desc">خدمة نقل العوائد بجميع أنواعها بأمان تام، مع توفر صفحات إعداد بيور 100% بضمان حقيقي.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 <div class="stats-section">
   <div class="container-fluid p-0">
     <div class="row g-0">
@@ -200,11 +416,6 @@ input[type="text"], .chat-input {
   </div>
 </section>
 
-
-
-
-
-
 <section class="section" id="about" style="background:var(--surface);border-top:1px solid var(--border);">
   <div class="container" style="max-width:1400px;">
     <div class="row align-items-center g-5 fade-in">
@@ -247,7 +458,7 @@ input[type="text"], .chat-input {
 
 <div id="footer"></div>
 
-<a href="https://wa.me/201220202940" class="whatsapp-float" target="_blank" title="تواصل معنا عبر واتساب">
+<a id="whatsappBtn" href="https://wa.me/201220202940" class="whatsapp-float" target="_blank" title="تواصل معنا عبر واتساب">
   <i class="fa-brands fa-whatsapp"></i>
   <span class="whatsapp-tooltip">تواصل معنا الآن</span>
 </a>
@@ -302,11 +513,13 @@ function toggleChat() {
   chatOpen = !chatOpen;
   document.getElementById('chatWindow').classList.toggle('open', chatOpen);
   document.getElementById('chatIcon').className = chatOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-comments';
+  document.getElementById('whatsappBtn').style.display = chatOpen ? 'none' : '';
 }
 function closeChat() {
   chatOpen = false;
   document.getElementById('chatWindow').classList.remove('open');
   document.getElementById('chatIcon').className = 'fa-solid fa-comments';
+  document.getElementById('whatsappBtn').style.display = '';
 }
 document.getElementById('chatToggle').addEventListener('click', toggleChat);
 const botReplies = {
@@ -366,40 +579,5 @@ function handleKey(e) {
 }
 </script>
 
-<style>
-    @media screen and (max-width: 992px) {
-.hero-tag {
-    margin: 5vh 0;
-}
-
-
-.about-badge {
-    display: none;
-}
-
-.about-img-box {min-height: auto;}
-
-.d-flex.justify-content-center.gap-3.flex-wrap a {
-    width: 100%;
-    direction: ltr;
-    text-align: center !important;
-    justify-content: center;
-}
-
-.svc-card.fade-in.visible {
-    padding: 20px;
-}
-
-
-h2.cta-title {
-    font-size: xx-large;
-}
-
-section.hero {
-    padding-bottom: 5vh;
-}
-        
-    }
-</style>
 </body>
 </html>

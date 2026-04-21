@@ -14,10 +14,10 @@ footer.innerHTML = `<footer>
       <div class="col-lg-2 col-md-6">
         <h5 class="footer-col-title">روابط سريعة</h5>
         <ul class="footer-links">
-          <li><a href="#services">خدماتنا</a></li>
-          <li><a href="#about">من نحن</a></li>
-          <li><a href="#portfolio">أعمالنا</a></li>
-          <li><a href="#contact">اتصل بنا</a></li>
+          <li><a href="https://3mmarx3.github.io/MediaTech/page/services.html">خدماتنا</a></li>
+          <li><a href="https://3mmarx3.github.io/MediaTech/page/about.html">من نحن</a></li>
+          <li><a href="https://3mmarx3.github.io/MediaTech/page/portfolio.html">أعمالنا</a></li>
+          <li><a href="https://3mmarx3.github.io/MediaTech/page/contact.html">اتصل بنا</a></li>
         </ul>
       </div>
       <div class="col-lg-3 col-md-6">
