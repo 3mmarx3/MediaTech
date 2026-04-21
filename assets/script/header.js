@@ -26,7 +26,7 @@ headerContainer.id = "main-header";
 headerContainer.innerHTML = `
   <nav id="navbar" class="navbar-custom">
     <div class="nav-container">
-      <a href="https://3mmarx3.github.io/MediaTech/" class="nav-logo" data-ar="ميديا تك <span>آدز</span>" data-en="MediaTech <span>Ads</span>">ميديا تك <span>آدز</span></a>
+      <a href="https://3mmarx3.github.io/MediaTech/" class="nav-logo" data-ar="  MediaTech Ads" data-en="MediaTech <span>Ads</span>">ميديا تك <span>آدز</span></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="https://3mmarx3.github.io/MediaTech/" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
         <li><a href="https://3mmarx3.github.io/MediaTech/page/services.html" data-ar="خدماتنا" data-en="Services">خدماتنا</a></li>
