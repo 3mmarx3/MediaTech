@@ -16,7 +16,6 @@ footer.innerHTML = `<footer>
         <ul class="footer-links">
           <li><a href="https://3mmarx3.github.io/MediaTech/page/services.html">خدماتنا</a></li>
           <li><a href="https://3mmarx3.github.io/MediaTech/page/about.html">من نحن</a></li>
-          <li><a href="https://3mmarx3.github.io/MediaTech/page/portfolio.html">أعمالنا</a></li>
           <li><a href="https://3mmarx3.github.io/MediaTech/page/contact.html">اتصل بنا</a></li>
         </ul>
       </div>
