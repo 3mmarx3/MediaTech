@@ -16,82 +16,92 @@ html, body {
 *, html, body {
   cursor: auto !important;
 }
-a, a *, button, button *, .btn-cta {
+a, a *, button, button *, .btn-cta, .service-main-card {
   cursor: pointer !important;
 }
-
-@media screen and (max-width: 992px) {
-    section.hero-services {
-    padding: 20px;
-    margin: 5vh 0;
-}
-
-h1.display-3.fw-black.mb-4 {
-    font-size: xx-large;
-}
-
 .service-main-card {
-    padding: 20px;
+  background: #fff;
+  border: 1px solid #eef2f6;
+  border-radius: 24px;
+  padding: 40px;
+  height: 100%;
+  position: relative;
+  transition: all 0.4s ease;
 }
-
-h2.fw-black.mb-5 {
-    font-size: xx-large !important;
+.service-main-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  border-color: #4f46e5;
 }
-
-a.btn-cta {
-    padding: 10px;
+.service-number {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 40px;
+  font-weight: 900;
+  color: rgba(79, 70, 229, 0.05);
 }
-section.hero-section {
-    padding: 35px 0;
+.icon-box {
+  width: 60px;
+  height: 60px;
+  background: rgba(79, 70, 229, 0.1);
+  color: #4f46e5;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 25px;
 }
-
-span {}
-
-h1.hero-title {
-    font-size: xx-large;
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
 }
-
-.foundation-card {
-    padding: 20px;
+.features-list li {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-
-h3 {
-    font-size: large !important;
+.features-list li i {
+  color: #22c55e;
 }
-
-.date-box {
-    font-size: smaller;
+.step-circle {
+  width: 60px;
+  height: 60px;
+  background: #4f46e5;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 20px;
+  font-weight: 800;
+  position: relative;
+  z-index: 2;
 }
-
-h2 {
-    font-size: xx-large !important;
+.process-step {
+  position: relative;
 }
-
-.service-card-solid {
-    padding: 20px;
+.process-step::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  right: -50%;
+  width: 100%;
+  height: 2px;
+  border-top: 2px dashed #e2e8f0;
+  z-index: 1;
 }
-
-.service-card-outline {
-    padding: 20px;
-}
-
-.service-card-dark {
-    padding: 20px;
-}
-
-.vm-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 18px;
-}
-
-section.guarantee-section.fade-in.visible {
-    background: #0e172a;
-}
-
-.vm-card {
-    padding: 20px;
-}
+@media screen and (max-width: 992px) {
+  .process-step::after { display: none; }
+  .hero-services { padding: 40px 20px; }
+  h1.display-3 { font-size: 2.5rem; }
+  .service-main-card { padding: 25px; }
 }
 </style>
 </head>
@@ -99,12 +109,12 @@ section.guarantee-section.fade-in.visible {
 <div id="header"></div>
 
 <section class="hero-services">
-  <div class="container">
+  <div class="container text-center">
     <div class="fade-in">
-      <div class="section-badge"><i class="fa-solid fa-rocket"></i> أطلق العنان لمشروعك</div>
+      <div class="section-badge mb-3"><i class="fa-solid fa-rocket"></i> أطلق العنان لمشروعك</div>
       <h1 class="display-3 fw-black mb-4" style="font-weight: 900;">حلولنا التقنية والتسويقية</h1>
-      <p class="lead mx-auto" style="max-width: 750px; font-weight: 600; color: var(--muted);">
-        نقدم حزمة شاملة من الخدمات المصممة خصيصاً لتجاوز العقبات التقنية وضمان أعلى عوائد استثمارية في سوق الميديا.
+      <p class="lead mx-auto" style="max-width: 750px; font-weight: 600; color: #64748b;">
+        نحن ندمج بين قوة التسويق الرقمي ودقة الحلول التقنية لنضمن لك بيئة عمل آمنة وأرباحاً مستدامة.
       </p>
     </div>
   </div>
@@ -119,12 +129,12 @@ section.guarantee-section.fade-in.visible {
           <span class="service-number">01</span>
           <div class="service-content">
             <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
-            <h3 class="fw-bold mb-3">إدارة الحملات الإعلانية (Ads Management)</h3>
-            <p class="text-muted fw-semibold">نحن لا نطلق إعلانات فقط، بل نصنع آلات بيع متكاملة على كافة المنصات.</p>
+            <h3 class="fw-bold mb-3">إدارة الحملات الإعلانية</h3>
+            <p class="text-muted fw-semibold">نصنع آلات بيع متكاملة على كافة المنصات الرقمية باحترافية.</p>
             <ul class="features-list">
               <li><i class="fa-solid fa-check-circle"></i> إعلانات فيسبوك وإنستجرام باستهداف ذكي.</li>
               <li><i class="fa-solid fa-check-circle"></i> حملات تيك توك وسناب شات للانتشار السريع.</li>
-              <li><i class="fa-solid fa-check-circle"></i> إعادة استهداف العملاء (Retargeting) لرفع المبيعات.</li>
+              <li><i class="fa-solid fa-check-circle"></i> إعادة استهداف العملاء لرفع المبيعات.</li>
             </ul>
           </div>
         </div>
@@ -139,8 +149,8 @@ section.guarantee-section.fade-in.visible {
             <p class="text-muted fw-semibold">الخدمة الحصرية لفك تعليق الأرباح واستلام الدفعات المتعثرة.</p>
             <ul class="features-list">
               <li><i class="fa-solid fa-check-circle"></i> استرداد العوائد الموقوفة في فيسبوك.</li>
-              <li><i class="fa-solid fa-check-circle"></i> فك حظر مديري الأعمال (BM) والحسابات الإعلانية.</li>
-              <li><i class="fa-solid fa-check-circle"></i> تأمين الحسابات ضد الاختراق والسياسات.</li>
+              <li><i class="fa-solid fa-check-circle"></i> فك حظر مديري الأعمال والحسابات الإعلانية.</li>
+              <li><i class="fa-solid fa-check-circle"></i> تأمين الحسابات ضد السياسات والاختراق.</li>
             </ul>
           </div>
         </div>
@@ -150,13 +160,13 @@ section.guarantee-section.fade-in.visible {
         <div class="service-main-card">
           <span class="service-number">03</span>
           <div class="service-content">
-            <div class="icon-box"><i class="fa-solid fa-store"></i></div>
-            <h3 class="fw-bold mb-3">بيع صفحات "بيور" وجاهزة للربح</h3>
-            <p class="text-muted fw-semibold">امتلك أصولك الرقمية بضمان ميديا تك، صفحات خالية من المخالفات.</p>
+            <div class="icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3 class="fw-bold mb-3">إصلاح وصيانة الكمبيوتر</h3>
+            <p class="text-muted fw-semibold">حلول تقنية شاملة للأعطال البرمجية والعتادية (Online & Offline).</p>
             <ul class="features-list">
-              <li><i class="fa-solid fa-check-circle"></i> صفحات إعداد كامل (Full Setup) بيور 100%.</li>
-              <li><i class="fa-solid fa-check-circle"></i> صفحات موثقة وجاهزة لتفعيل الربح الفوري.</li>
-              <li><i class="fa-solid fa-check-circle"></i> دعم تقني ما بعد البيع لضمان استقرار الصفحة.</li>
+              <li><i class="fa-solid fa-check-circle"></i> تثبيت أنظمة الويندوز الأصلية والبرامج.</li>
+              <li><i class="fa-solid fa-check-circle"></i> إصلاح مشاكل الأداء والبطء المفاجئ.</li>
+              <li><i class="fa-solid fa-check-circle"></i> صيانة الهاردوير وتغيير القطع التالفة.</li>
             </ul>
           </div>
         </div>
@@ -166,13 +176,45 @@ section.guarantee-section.fade-in.visible {
         <div class="service-main-card">
           <span class="service-number">04</span>
           <div class="service-content">
-            <div class="icon-box"><i class="fa-solid fa-palette"></i></div>
-            <h3 class="fw-bold mb-3">صناعة المحتوى البصري الإعلاني</h3>
-            <p class="text-muted fw-semibold">المحتوى هو الملك، ونحن نصنع الملوك لجذب انتباه جمهورك.</p>
+            <div class="icon-box"><i class="fa-solid fa-virus-slash"></i></div>
+            <h3 class="fw-bold mb-3">إزالة الفيروسات واستعادة البيانات</h3>
+            <p class="text-muted fw-semibold">حماية خصوصيتك واسترجاع ملفاتك الثمينة بأحدث التقنيات.</p>
             <ul class="features-list">
-              <li><i class="fa-solid fa-check-circle"></i> تصميم فيديوهات موشن جرافيك احترافية.</li>
-              <li><i class="fa-solid fa-check-circle"></i> كتابة نصوص إعلانية (Copywriting) بيعية.</li>
-              <li><i class="fa-solid fa-check-circle"></i> تصميم هويات بصرية متكاملة للمتاجر والشركات.</li>
+              <li><i class="fa-solid fa-check-circle"></i> تنظيف شامل للفيروسات وبرامج التجسس.</li>
+              <li><i class="fa-solid fa-check-circle"></i> استعادة الصور والملفات المحذوفة بنجاح عالٍ.</li>
+              <li><i class="fa-solid fa-check-circle"></i> تأمين الأجهزة ضد هجمات الفدية المستقبلية.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 fade-in">
+        <div class="service-main-card">
+          <span class="service-number">05</span>
+          <div class="service-content">
+            <div class="icon-box"><i class="fa-solid fa-key"></i></div>
+            <h3 class="fw-bold mb-3">بيع برامج وويندوز أصلي</h3>
+            <p class="text-muted fw-semibold">تخلص من الكراكات الضارة واستخدم برمجيات رسمية بأرخص سعر.</p>
+            <ul class="features-list">
+              <li><i class="fa-solid fa-check-circle"></i> مفاتيح تفعيل ويندوز 10 و 11 برو أصلية.</li>
+              <li><i class="fa-solid fa-check-circle"></i> اشتراكات Microsoft Office 365 رسمية.</li>
+              <li><i class="fa-solid fa-check-circle"></i> برامج الحماية من الفيروسات العالمية.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 fade-in">
+        <div class="service-main-card">
+          <span class="service-number">06</span>
+          <div class="service-content">
+            <div class="icon-box"><i class="fa-solid fa-store"></i></div>
+            <h3 class="fw-bold mb-3">بيع صفحات "بيور" جاهزة</h3>
+            <p class="text-muted fw-semibold">امتلك أصولك الرقمية بضمان ميديا تك، صفحات خالية من المخالفات.</p>
+            <ul class="features-list">
+              <li><i class="fa-solid fa-check-circle"></i> صفحات إعداد كامل (Full Setup) بيور 100%.</li>
+              <li><i class="fa-solid fa-check-circle"></i> صفحات جاهزة لتفعيل الربح الفوري.</li>
+              <li><i class="fa-solid fa-check-circle"></i> دعم تقني ما بعد البيع لضمان الاستقرار.</li>
             </ul>
           </div>
         </div>
@@ -200,12 +242,12 @@ section.guarantee-section.fade-in.visible {
       <div class="col-md-3 process-step">
         <div class="step-circle">3</div>
         <h4 class="fw-bold">التنفيذ الفني</h4>
-        <p class="text-muted">فريقنا التقني يبدأ العمل الفوري على حساباتك.</p>
+        <p class="text-muted">فريقنا يبدأ العمل الفوري على حساباتك أو جهازك.</p>
       </div>
-      <div class="col-md-3 process-step" style="&::after {display:none;}">
+      <div class="col-md-3 process-step">
         <div class="step-circle"><i class="fa-solid fa-crown"></i></div>
-        <h4 class="fw-bold">النجاح والأرباح</h4>
-        <p class="text-muted">استلام النتائج، العوائد، وتقارير الأداء.</p>
+        <h4 class="fw-bold">النجاح</h4>
+        <p class="text-muted">استلام النتائج والتقارير مع ضمان الاستمرارية.</p>
       </div>
     </div>
   </div>
@@ -216,16 +258,19 @@ section.guarantee-section.fade-in.visible {
     <div class="bg-dark text-white p-5 rounded-5 text-center position-relative overflow-hidden">
         <div style="position: relative; z-index: 2;">
             <h2 class="display-5 fw-black mb-4">جاهز لتأمين وتطوير أعمالك الرقمية؟</h2>
-            <p class="mb-5 opacity-75 fs-5">انضم لأكثر من 500 عميل يثقون في ميديا تك لإدارة أصولهم.</p>
-            <a href="#" class="btn-cta">تحدث مع مستشارنا الآن <i class="fa-brands fa-whatsapp"></i></a>
+            <p class="mb-5 opacity-75 fs-5">انضم لأكثر من 500 عميل يثقون في ميديا تك لإدارة أصولهم وحل مشاكلهم.</p>
+            <a href="https://wa.me/201220202940" target="_blank" class="btn-cta text-decoration-none" style="background:#25d366; color:white; padding:15px 40px; border-radius:50px; font-weight:800; display:inline-block;">تحدث مع مستشارنا الآن <i class="fa-brands fa-whatsapp"></i></a>
         </div>
         <i class="fa-solid fa-shield-heart" style="position: absolute; right: -50px; bottom: -50px; font-size: 300px; opacity: 0.05;"></i>
     </div>
   </div>
 </section>
+
 <div id="footer"></div>
+
 <script src="../assets/script/header.js"></script>
 <script src="../assets/script/footer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -236,7 +281,5 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>

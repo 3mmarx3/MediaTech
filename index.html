@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MediaTech Ads — وكالة تسويق وإعلانات</title>
+<title>MediaTech Ads — وكالة تسويق وإعلانات وحلول تقنية</title>
+<meta name="description" content="وكالة MediaTech Ads متخصصة في الحملات الإعلانية، إدارة صفحات فيسبوك، إصلاح مشاكل الكمبيوتر، إزالة الفيروسات، استعادة البيانات، وبيع برامج وويندوز أصلية بأرخص سعر.">
+<meta name="keywords" content="إعلانات فيسبوك, إدارة صفحات, إصلاح كمبيوتر, إزالة فيروسات, استعادة بيانات, ويندوز اصلي, اكسل اصلي, حلول تقنية, MediaTech Ads">
+<meta property="og:title" content="MediaTech Ads — وكالة تسويق وإعلانات وحلول تقنية">
+<meta property="og:description" content="حملات إعلانية قوية، إدارة صفحات فيسبوك، وحلول تقنية متكاملة لإصلاح الكمبيوتر وحماية بياناتك.">
+<meta property="og:type" content="website">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -46,6 +51,258 @@ input[type="text"], .chat-input {
   }
   section.hero {
     padding-bottom: 5vh;
+  }
+}
+
+.tech-section {
+  padding: 100px 0;
+  background: var(--bg, #ffffff);
+  border-top: 1px solid var(--border, #e2e8f0);
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-card {
+  background: var(--surface, #f8fafc);
+  border: 1px solid var(--border, #e2e8f0);
+  border-radius: 24px;
+  padding: 36px 30px;
+  height: 100%;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #4f46e5, #7c3aed);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+
+.tech-card:hover::before {
+  transform: scaleX(1);
+}
+
+.tech-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(79, 70, 229, 0.10);
+  border-color: var(--accent, #4f46e5);
+}
+
+.tech-card-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 22px;
+  flex-shrink: 0;
+}
+
+.tech-card-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text, #0f172a);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.tech-card-desc {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--muted, #64748b);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-left: 6px;
+  margin-bottom: 6px;
+}
+
+.tech-badge-green {
+  background: rgba(34, 197, 94, 0.12);
+  color: #16a34a;
+}
+
+.tech-badge-blue {
+  background: rgba(79, 70, 229, 0.10);
+  color: #4f46e5;
+}
+
+.tech-badge-orange {
+  background: rgba(245, 158, 11, 0.12);
+  color: #d97706;
+}
+
+.tech-badge-red {
+  background: rgba(239, 68, 68, 0.12);
+  color: #dc2626;
+}
+
+.tech-featured {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-color: transparent;
+  color: white;
+}
+
+.tech-featured .tech-card-title {
+  color: #ffffff;
+}
+
+.tech-featured .tech-card-desc {
+  color: rgba(255,255,255,0.75);
+}
+
+.tech-featured::before {
+  background: linear-gradient(90deg, #25d366, #128c7e);
+}
+
+.tech-price-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.services-showcase {
+  padding: 100px 0;
+  background: var(--surface, #f8fafc);
+  position: relative;
+  overflow: hidden;
+}
+
+.showcase-header {
+  margin-bottom: 70px;
+}
+
+.showcase-title {
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: 900;
+  color: var(--text, #0f172a);
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.showcase-desc {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--muted, #64748b);
+  line-height: 1.8;
+}
+
+.svc-img-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  height: 380px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  cursor: pointer !important;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--border, #e2e8f0);
+}
+
+.svc-img-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 25px 60px rgba(79, 70, 229, 0.12);
+  border-color: var(--accent, #4f46e5);
+}
+
+.svc-img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.svc-img-card:hover img {
+  transform: scale(1.1);
+}
+
+.svc-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 30px;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.98) 0%, rgba(15, 23, 42, 0) 100%);
+  color: white;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.svc-img-card:hover .svc-card-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.svc-card-icon {
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.svc-card-title {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.svc-card-desc {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .svc-img-card {
+    height: 320px;
+  }
+}
+
+@media (max-width: 576px) {
+  .svc-img-card {
+    height: 280px;
+  }
+  .svc-card-overlay {
+    padding: 30px 20px;
+  }
+  .svc-card-title {
+    font-size: 20px;
+  }
+  .tech-card {
+    padding: 24px 20px;
   }
 }
 </style>
@@ -131,132 +388,13 @@ input[type="text"], .chat-input {
     <div class="ticker-item"><i class="fa-solid fa-bolt"></i> متاح صفحات إعداد بيور 100%</div>
     <div class="ticker-item"><i class="fa-solid fa-bolt"></i> ضمان استلام أرباحك بأمان</div>
     <div class="ticker-item"><i class="fa-solid fa-bolt"></i> استعادة الربح مرة أخرى</div>
+    <div class="ticker-item"><i class="fa-solid fa-bolt"></i> إصلاح مشاكل الكمبيوتر</div>
+    <div class="ticker-item"><i class="fa-solid fa-bolt"></i> إزالة الفيروسات بضمان</div>
+    <div class="ticker-item"><i class="fa-solid fa-bolt"></i> استعادة البيانات المحذوفة</div>
+    <div class="ticker-item"><i class="fa-solid fa-bolt"></i> ويندوز وبرامج أصلية بأرخص سعر</div>
   </div>
 </div>
 
-
-<style>
-  .services-showcase {
-    padding: 100px 0;
-    background: var(--surface, #f8fafc); /* لون خلفية السطح الأساسي */
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .showcase-header {
-    margin-bottom: 70px;
-
-  }
-
-  .showcase-title {
-    font-size: clamp(2.5rem, 5vw, 3.8rem);
-    font-weight: 900;
-    color: var(--text, #0f172a);
-    line-height: 1.2;
-    margin-bottom: 15px;
-  }
-
-  .showcase-desc {
-    font-size: 19px;
-    font-weight: 600;
-    color: var(--muted, #64748b);
-    line-height: 1.8;
-  }
-
-  /* تنسيق شبكة الصور المميز */
-  .svc-img-card {
-    position: relative;
-    border-radius: 28px;
-    overflow: hidden;
-    height: 380px; /* ارتفاع ثابت للبطاقات للحفاظ على التناسق */
-    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
-    cursor: pointer !important;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid var(--border, #e2e8f0);
-  }
-
-  /* تأثير التكبير عند تمرير الماوس */
-  .svc-img-card:hover {
-    transform: translateY(-8px) scale(1.01);
-    box-shadow: 0 25px 60px rgba(79, 70, 229, 0.12); /* توهج بلون الأكسنت */
-    border-color: var(--accent, #4f46e5);
-  }
-
-  .svc-img-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* جعل الصورة تغطي المساحة بالكامل */
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .svc-img-card:hover img {
-    transform: scale(1.1); /* تكبير الصورة قليلاً */
-  }
-
-  /* تأثير التراكب (Overlay) النصي */
-  .svc-card-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 40px 30px;
-    background: linear-gradient(to top, rgba(15, 23, 42, 0.98) 0%, rgba(15, 23, 42, 0) 100%);
-    color: white;
-    transform: translateY(20px);
-    opacity: 0;
-    transition: all 0.4s ease-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 100%;
-  }
-
-  .svc-img-card:hover .svc-card-overlay {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  .svc-card-icon {
-    font-size: 30px;
-    color: #ffffff; /* لون الأكسنت في التراكب */
-    margin-bottom: 15px;
-  }
-
-  .svc-card-title {
-    font-size: 24px;
-    font-weight: 800;
-    margin-bottom: 10px;
-    color: #ffffff;
-    line-height: 1.3;
-  }
-
-  .svc-card-desc {
-    font-size: 15px;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.85);
-    line-height: 1.7;
-    margin-bottom: 0;
-  }
-
-  /* تنسيق خاص للشاشات الصغيرة */
-  @media (max-width: 991px) {
-    .svc-img-card {
-      height: 320px;
-    }
-  }
-
-  @media (max-width: 576px) {
-    .svc-img-card {
-      height: 280px;
-    }
-    .svc-card-overlay {
-      padding: 30px 20px;
-    }
-    .svc-card-title {
-      font-size: 20px;
-    }
-  }
-</style>
 
 <section class="services-showcase fade-in" id="services">
   <div class="container" style="max-width: 1400px;">
@@ -327,6 +465,7 @@ input[type="text"], .chat-input {
     </div>
   </div>
 </section>
+
 <div class="stats-section">
   <div class="container-fluid p-0">
     <div class="row g-0">
@@ -416,6 +555,118 @@ input[type="text"], .chat-input {
   </div>
 </section>
 
+<section class="tech-section" id="tech-services">
+  <div class="container" style="max-width:1400px;">
+    <div class="fade-in mb-5">
+      <div class="section-label">خدمات الكمبيوتر والتقنية</div>
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3">
+        <h2 class="section-title mb-0">حلول تقنية شاملة<br><span class="muted">لكل مشاكل جهازك.</span></h2>
+        <p style="max-width:420px;font-size:16px;font-weight:600;color:var(--muted);line-height:1.8;margin-bottom:0;">من إصلاح الأعطال الصعبة إلى حماية بياناتك وتوفير البرامج الأصلية — كل ما تحتاجه في مكان واحد.</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-lg-4 col-md-6">
+        <div class="tech-card fade-in">
+          <div class="tech-card-icon" style="background:rgba(79,70,229,0.10);color:#4f46e5;">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+          <h3 class="tech-card-title">إصلاح مشاكل الكمبيوتر (سوفت وير وهارد وير)</h3>
+          <p class="tech-card-desc">نشخص ونُصلح كافة أعطال الكمبيوتر سواء كانت في النظام والبرامج أو في المكونات والقطع الداخلية — تشخيص دقيق وحل جذري وسريع.</p>
+          <div>
+            <span class="tech-badge tech-badge-blue"><i class="fa-solid fa-circle-check"></i> سوفت وير</span>
+            <span class="tech-badge tech-badge-blue"><i class="fa-solid fa-circle-check"></i> هارد وير</span>
+            <span class="tech-badge tech-badge-green"><i class="fa-solid fa-circle-check"></i> حل أونلاين متاح</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="tech-card fade-in">
+          <div class="tech-card-icon" style="background:rgba(239,68,68,0.10);color:#dc2626;">
+            <i class="fa-solid fa-shield-virus"></i>
+          </div>
+          <h3 class="tech-card-title">إزالة الفيروسات والحماية من التهديدات</h3>
+          <p class="tech-card-desc">إزالة فورية وشاملة لجميع أنواع الفيروسات والبرامج الضارة والملفات الخبيثة من جهازك، مع تأمين الحماية الكاملة لمنع أي إصابة مستقبلية.</p>
+          <div>
+            <span class="tech-badge tech-badge-red"><i class="fa-solid fa-virus-slash"></i> إزالة فيروسات</span>
+            <span class="tech-badge tech-badge-green"><i class="fa-solid fa-shield-halved"></i> حماية كاملة</span>
+            <span class="tech-badge tech-badge-green"><i class="fa-solid fa-circle-check"></i> أونلاين متاح</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="tech-card fade-in">
+          <div class="tech-card-icon" style="background:rgba(245,158,11,0.10);color:#d97706;">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <h3 class="tech-card-title">استعادة البيانات المحذوفة أو المفقودة</h3>
+          <p class="tech-card-desc">استرجاع ملفاتك وصورك ووثائقك المحذوفة أو التالفة بسبب الفيروسات أو الأعطال أو الحذف الخاطئ — نسبة نجاح عالية وبيانات آمنة.</p>
+          <div>
+            <span class="tech-badge tech-badge-orange"><i class="fa-solid fa-rotate-left"></i> استعادة ملفات</span>
+            <span class="tech-badge tech-badge-orange"><i class="fa-solid fa-image"></i> صور وفيديو</span>
+            <span class="tech-badge tech-badge-green"><i class="fa-solid fa-circle-check"></i> أونلاين متاح</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="tech-card fade-in">
+          <div class="tech-card-icon" style="background:rgba(34,197,94,0.10);color:#16a34a;">
+            <i class="fa-brands fa-windows"></i>
+          </div>
+          <h3 class="tech-card-title">ويندوز 10 و 11 أصلي للبيع</h3>
+          <p class="tech-card-desc">نوفر نسخ ويندوز 10 وويندوز 11 أصلية ومرخصة بأسعار تنافسية ومنافسة للسوق — تفعيل فوري وضمان الأصالة.</p>
+          <div>
+            <span class="tech-badge tech-badge-green"><i class="fa-solid fa-certificate"></i> أصلي 100%</span>
+            <span class="tech-badge tech-badge-blue"><i class="fa-brands fa-windows"></i> Win 10</span>
+            <span class="tech-badge tech-badge-blue"><i class="fa-brands fa-windows"></i> Win 11</span>
+            <div class="tech-price-tag"><i class="fa-solid fa-tag"></i> بأرخص سعر في السوق</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="tech-card fade-in">
+          <div class="tech-card-icon" style="background:rgba(34,197,94,0.10);color:#16a34a;">
+            <i class="fa-solid fa-file-excel"></i>
+          </div>
+          <h3 class="tech-card-title">برنامج Excel الأصلي ومجموعة Office</h3>
+          <p class="tech-card-desc">نوفر برنامج Excel الأصلي وكامل مجموعة Microsoft Office بتراخيص رسمية وأسعار مناسبة — للاستخدام الشخصي والتجاري.</p>
+          <div>
+            <span class="tech-badge tech-badge-green"><i class="fa-solid fa-certificate"></i> نسخة أصلية</span>
+            <span class="tech-badge tech-badge-blue"><i class="fa-solid fa-file-excel"></i> Excel</span>
+            <span class="tech-badge tech-badge-blue"><i class="fa-solid fa-file-word"></i> Word</span>
+            <div class="tech-price-tag"><i class="fa-solid fa-tag"></i> بأرخص سعر في السوق</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-12">
+        <div class="tech-card tech-featured fade-in">
+          <div class="tech-card-icon" style="background:rgba(37,211,102,0.15);color:#25d366;">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h3 class="tech-card-title">استشارات تقنية وحلول أونلاين</h3>
+          <p class="tech-card-desc">لا تحتاج لزيارتنا — نقدم حلولاً تقنية عن بُعد عبر الإنترنت لإصلاح جهازك، تنظيفه من الفيروسات، وتركيب البرامج من راحة بيتك.</p>
+          <div>
+            <span class="tech-badge" style="background:rgba(37,211,102,0.15);color:#25d366;"><i class="fa-solid fa-globe"></i> عن بُعد أونلاين</span>
+            <span class="tech-badge" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);"><i class="fa-solid fa-clock"></i> استجابة سريعة</span>
+          </div>
+          <div class="mt-4">
+            <a href="https://wa.me/201220202940" target="_blank" class="btn-primary-glow" style="background:#25d366;color:white;box-shadow:0 8px 20px rgba(37,211,102,0.3);font-size:15px;padding:12px 24px;">
+              <i class="fa-brands fa-whatsapp"></i> ابدأ الاستشارة الآن
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section class="section" id="about" style="background:var(--surface);border-top:1px solid var(--border);">
   <div class="container" style="max-width:1400px;">
     <div class="row align-items-center g-5 fade-in">
@@ -434,7 +685,7 @@ input[type="text"], .chat-input {
       <div class="col-lg-6">
         <div class="section-label">من نحن</div>
         <h2 class="section-title">وكالة MediaTech Ads<br><span class="muted">الخيار الأول لنجاحك.</span></h2>
-        <p style="font-size:19px;color:var(--muted);line-height:1.9;margin-bottom:40px;font-weight:600;">نحن في MediaTech Ads نؤمن بأن النجاح الرقمي يتطلب أكثر من مجرد إعلانات. نحن نقدم حزمة متكاملة تبدأ من تصميم المحتوى الذي يجذب العملاء، إطلاق الحملات الإعلانية القوية، وحتى إدارة الصفحات وحل كافة مشاكلها التقنية ومشاكل العوائد.<br><br><strong style="color:var(--text);">التميز الخاص بنا:</strong> ضمان استلام أرباحك بأمان تام وموثوقية عالية.</p>
+        <p style="font-size:19px;color:var(--muted);line-height:1.9;margin-bottom:40px;font-weight:600;">نحن في MediaTech Ads نؤمن بأن النجاح الرقمي يتطلب أكثر من مجرد إعلانات. نحن نقدم حزمة متكاملة تبدأ من تصميم المحتوى الذي يجذب العملاء، إطلاق الحملات الإعلانية القوية، وحتى إدارة الصفحات وحل كافة مشاكلها التقنية ومشاكل العوائد.<br><br><strong style="color:var(--text);">التميز الخاص بنا:</strong> ضمان استلام أرباحك بأمان تام وموثوقية عالية، إلى جانب خدمات تقنية متكاملة لإصلاح الكمبيوتر وإزالة الفيروسات واستعادة البيانات وتوفير البرامج الأصلية بأرخص الأسعار.</p>
     
         <div class="mt-5">
           <a href="#contact" class="btn-primary-glow">تواصل معنا عبر واتساب &larr;</a>
@@ -448,10 +699,10 @@ input[type="text"], .chat-input {
   <div class="container" style="position:relative;z-index:1;max-width:1400px;">
     <div class="section-label d-flex justify-content-center mx-auto mb-4" style="color:rgba(255,255,255,0.9);">تواصل معنا الآن</div>
     <h2 class="cta-title">هل أنت مستعد<br><span style="color:white;">لتحقيق نتائج قوية؟</span></h2>
-    <p class="cta-sub">دعنا ندير لك حملاتك ونحل كافة مشاكل صفحاتك مع ضمان استلام أرباحك بأمان.</p>
+    <p class="cta-sub">دعنا ندير لك حملاتك ونحل كافة مشاكل صفحاتك وجهازك مع ضمان استلام أرباحك بأمان.</p>
     <div class="d-flex justify-content-center gap-3 flex-wrap">
       <a href="https://wa.me/201220202940" target="_blank" class="btn-primary-glow" style="background:#25d366;color:white;box-shadow: 0 10px 30px rgba(37,211,102,0.3);"><i class="fa-brands fa-whatsapp"></i> 01220202940</a>
-      <a href="mailto:aborean249@gmail.com" class="btn-ghost" ><i class="fa-solid fa-envelope"></i> aborean249@.com</a>
+      <a href="mailto:aborean249@gmail.com" class="btn-ghost"><i class="fa-solid fa-envelope"></i> aborean249@gmail.com</a>
     </div>
   </div>
 </section>
@@ -478,13 +729,17 @@ input[type="text"], .chat-input {
   </div>
   <div class="chat-body" id="chatBody">
     <div class="msg bot">
-      👋 أهلاً بك في <strong>MediaTech Ads</strong>. كيف يمكنني مساعدتك اليوم في تنمية أعمالك أو حل مشاكل صفحتك؟
+      👋 أهلاً بك في <strong>MediaTech Ads</strong>. كيف يمكنني مساعدتك اليوم في تنمية أعمالك أو حل مشاكل صفحتك أو جهازك؟
     </div>
     <div>
       <div class="quick-replies">
         <button class="qr-btn" onclick="sendQuick('الخدمات الإعلانية')">🚀 الخدمات الإعلانية</button>
         <button class="qr-btn" onclick="sendQuick('إصلاح مشاكل العوائد')">💰 مشاكل العوائد</button>
         <button class="qr-btn" onclick="sendQuick('إدارة صفحات فيسبوك')">⚙️ إدارة الصفحات</button>
+        <button class="qr-btn" onclick="sendQuick('إصلاح الكمبيوتر')">💻 إصلاح الكمبيوتر</button>
+        <button class="qr-btn" onclick="sendQuick('إزالة الفيروسات')">🛡️ إزالة فيروسات</button>
+        <button class="qr-btn" onclick="sendQuick('استعادة البيانات')">💾 استعادة بيانات</button>
+        <button class="qr-btn" onclick="sendQuick('شراء ويندوز أو برامج')">🪟 ويندوز وبرامج أصلية</button>
         <button class="qr-btn" onclick="sendQuick('التواصل للحجز')">📞 التواصل المباشر</button>
       </div>
     </div>
@@ -526,6 +781,10 @@ const botReplies = {
   'الخدمات الإعلانية': "نقدم خدمات إعلانية قوية تضمن لك نتائج مذهلة. نقوم بتصميم محتوى يجذب العملاء وإطلاق الحملات. هل تود التحدث مع خبير؟",
   'إصلاح مشاكل العوائد': "نحن متخصصون في إصلاح مشاكل العوائد، استعادة الربح مرة أخرى، ونقل العوائد بجميع أنواعها بأمان تام. تواصل معنا على واتساب 01220202940 للتفاصيل.",
   'إدارة صفحات فيسبوك': "نقوم بإدارة صفحات فيسبوك بشكل كامل مع حل جميع المشاكل التقنية التي تواجهها. كما يتوفر لدينا صفحات إعداد بيور بضمان 100%.",
+  'إصلاح الكمبيوتر': "نقدم خدمات إصلاح شاملة للكمبيوتر سواء سوفت وير أو هارد وير، مع إمكانية الحل أونلاين عن بُعد من راحة بيتك. تواصل معنا الآن على 01220202940.",
+  'إزالة الفيروسات': "نقوم بإزالة جميع أنواع الفيروسات والبرامج الضارة من جهازك وتأمين الحماية الكاملة. متاح أونلاين عن بُعد! تواصل معنا على 01220202940.",
+  'استعادة البيانات': "نستعيد ملفاتك وصورك المحذوفة أو التالفة بنسبة نجاح عالية. تواصل معنا على واتساب 01220202940 لمعرفة إمكانية استعادة بياناتك.",
+  'شراء ويندوز أو برامج': "نوفر ويندوز 10 و 11 أصلي، وبرنامج Excel ومجموعة Office الأصلية بأرخص سعر في السوق مع ضمان الأصالة. تواصل معنا على 01220202940 للاستفسار عن الأسعار.",
   'التواصل للحجز': "تفضل بالتواصل معنا مباشرة عبر واتساب أو الاتصال على الرقم: 01220202940 أو عبر الإيميل aborean249@gmail.com",
   'default': "مرحباً بك! لتقديم أفضل مساعدة، يرجى التواصل معنا مباشرة على رقم الواتساب الخاص بنا: 01220202940."
 };
