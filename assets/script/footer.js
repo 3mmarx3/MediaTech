@@ -32,7 +32,7 @@ footer.innerHTML = `<footer>
       <div class="col-lg-3 col-md-6">
         <h5 class="footer-col-title" data-ar="معلومات التواصل" data-en="Contact Info">معلومات التواصل</h5>
         <ul class="footer-links">
-          <li><a href="tel:01220202940" class="d-flex align-items-center gap-2 text-start" ><i class="fa-solid fa-phone"></i> 01220202940</a></li>
+          <li><a href="tel:01220202940" class="d-flex align-items-center gap-2 text-start" style="direction:ltr;justify-content:flex-end;"><i class="fa-solid fa-phone"></i> 01220202940</a></li>
           <li><a href="mailto:aborean249@gmail.com" class="d-flex align-items-center gap-2"><i class="fa-solid fa-envelope"></i> aborean249@gmail.com</a></li>
           <li><a href="#" class="d-flex align-items-center gap-2"><i class="fa-solid fa-calendar"></i> <span data-ar="تأسست في: 13/4/2026" data-en="Founded on: April 13, 2026">تأسست في: 13/4/2026</span></a></li>
           <li><a href="#" class="d-flex align-items-center gap-2" style="color:var(--accent);font-weight:800;"><i class="fa-solid fa-shield-check"></i> <span data-ar="ضمان استلام أرباحك بأمان" data-en="Secure Profit Receipt Guarantee">ضمان استلام أرباحك بأمان</span></a></li>
@@ -48,3 +48,13 @@ footer.innerHTML = `<footer>
     </div>
   </div>
 </footer>`;
+
+let currentLang = localStorage.getItem('mtAdsLang') || 'ar';
+let footerElements = footer.querySelectorAll('[data-ar]');
+footerElements.forEach(el => {
+  if (currentLang === 'en') {
+    if (el.getAttribute('data-en')) el.innerHTML = el.getAttribute('data-en');
+  } else {
+    if (el.getAttribute('data-ar')) el.innerHTML = el.getAttribute('data-ar');
+  }
+});
